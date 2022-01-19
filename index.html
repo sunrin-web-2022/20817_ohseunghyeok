@@ -35,29 +35,21 @@
                             </li>
                             <li>
                                 <!-- 언어 선택 -->
-                                <div class="dropdown">
-                                    <a
-                                        class="dropdown-toggle"
-                                        href="javascript:void(0);"
-                                        role="button"
-                                        id="dropdownMenuLink"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        LANGUAGE
-                                    </a>
-
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="lan-dropdown">
+                                    <input type="checkbox" id="language">
+                                    <label for="language">LANGUAGE</label>
+                                    <ul class="lan-dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <li>
-                                            <a class="dropdown-item" href="javascript:void(0);">한국어</a>
+                                            <a href="javascript:void(0);">한국어</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="javascript:void(0);">English</a>
+                                            <a href="javascript:void(0);">English</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="javascript:void(0);">中文(简体)</a>
+                                            <a href="javascript:void(0);">中文(简体)</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="javascript:void(0);">日本語</a>
+                                            <a href="javascript:void(0);">日本語</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -315,29 +307,21 @@
                                 </li>
                                 <li>
                                     <!-- 언어 선택 -->
-                                    <div class="dropdown">
-                                        <a
-                                            class="dropdown-toggle"
-                                            href="javascript:void(0);"
-                                            role="button"
-                                            id="dropdownMenuLink"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            LANGUAGE
-                                        </a>
-    
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <div class="lan-dropdown">
+                                        <input type="checkbox" id="drawer-language">
+                                        <label for="drawer-language">LANGUAGE</label>
+                                        <ul class="lan-dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="javascript:void(0);">한국어</a>
+                                                <a href="javascript:void(0);">한국어</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="javascript:void(0);">English</a>
+                                                <a href="javascript:void(0);">English</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="javascript:void(0);">中文(简体)</a>
+                                                <a href="javascript:void(0);">中文(简体)</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="javascript:void(0);">日本語</a>
+                                                <a href="javascript:void(0);">日本語</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -523,7 +507,7 @@
                                                 <li>
                                                     <a href="javascript:void(0);">
                                                         <span class="text">
-                                                            <span class="badge bg-primary">용역</span>
+                                                            <span class="type-badge">용역</span>
                                                             전통무용 분야 종목의 국가무형문화재 지정을 위한 기초조사 연구용역
                                                         </span>
                                                         <span class="date">2020-05-01</span>
@@ -532,7 +516,7 @@
                                                 <li>
                                                     <a href="javascript:void(0);">
                                                         <span class="text">
-                                                            <span class="badge bg-primary">물품구매</span>
+                                                            <span class="type-badge">물품구매</span>
                                                             무형문화재관리원 전산실 스토리지 용량 증설 관련 물품구매
                                                         </span>
                                                         <span class="date">2020-04-30</span>
@@ -541,7 +525,7 @@
                                                 <li>
                                                     <a href="javascript:void(0);">
                                                         <span class="text">
-                                                            <span class="badge bg-primary">공사</span>
+                                                            <span class="type-badge">공사</span>
                                                             무형문화재관리원 주차장 증측 공사
                                                         </span>
                                                         <span class="date">2020-04-21</span>
@@ -551,7 +535,7 @@
                                                     <a href="javascript:void(0);">
                                                         
                                                         <span class="text">
-                                                            <span class="badge bg-primary">용역</span>
+                                                            <span class="type-badge">용역</span>
                                                             2020년 전수교육관 활성화 사업 모니터링 용역
                                                         </span>
                                                         <span class="date">2020-04-20</span>
@@ -561,7 +545,7 @@
                                                     <a href="javascript:void(0);">
                                                         
                                                         <span class="text">
-                                                            <span class="badge bg-primary">용역</span>
+                                                            <span class="type-badge">용역</span>
                                                             세계유산 영향평가 도입방안 연구
                                                         </span>
                                                         <span class="date">2020-04-27</span>
@@ -647,77 +631,61 @@
                         <p>국립무형유산원의 행사를 안내해 드립니다.</p>
                     </div>
                     <div class="layout">
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">문화가 있는 날1 - 신노이</h5>
-                              <span class="badge bg-secondary mb-2">공연</span>
-                              <h6 class="card-subtitle mb-2 text-muted">얼쑤마루 대공연장</h6>
-                              <p class="card-text">2021년 5월 27일 D-14</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">문화가 있는 날1 - 신노이</h5>
+                            <span class="type-badge mb-2">공연</span>
+                            <p class="card-text">얼쑤마루 대공연장</p>
+                            <p class="card-text">2021년 5월 27일 D-14</p>
+                            <a href="javascript:void(0);">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">탈놀이, 신명에 실어 시름을 날리다 특별전</h5>
-                              <span class="badge bg-success mb-2">전시</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 상설전시실1</h6>
-                              <p class="card-text">일시: 2021년 5월 27일 ~</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">탈놀이, 신명에 실어 시름을 날리다 특별전</h5>
+                            <span class="type-badge mb-2">전시</span>
+                            <p class="card-text">장소: 상설전시실1</p>
+                            <p class="card-text">일시: 2021년 5월 27일 ~</p>
+                            <a href="javascript:void(0);">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">문화가 있는 날2 - 국한유래 무형유산 공연</h5>
-                              <span class="badge bg-secondary mb-2">공연</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 얼쑤마루 대공연장</h6>
-                              <p class="card-text">일시: 2021년 5월 24일 D-11</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">문화가 있는 날2 - 국한유래 무형유산 공연</h5>
+                            <span class="type-badge mb-2">공연</span>
+                            <p class="card-text">장소: 얼쑤마루 대공연장</p>
+                            <p class="card-text">일시: 2021년 5월 24일 D-11</p>
+                            <a href="javascript:void(0);">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">유네스코 인류무형유산 등재 기념 특별전, 씨름</h5>
-                              <span class="badge bg-success mb-2">전시</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 기획전시실</h6>
-                              <p class="card-text">일시: 2021년 4월 1일 ~</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">유네스코 인류무형유산 등재 기념 특별전, 씨름</h5>
+                            <span class="type-badge mb-2">전시</span>
+                            <p class="card-text">장소: 기획전시실</p>
+                            <p class="card-text">일시: 2021년 4월 1일 ~</p>
+                            <a href="javascript:void(0);">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">전통예능 갈래</h5>
-                              <span class="badge bg-secondary mb-2">공연</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 얼쑤마루 대공연장</h6>
-                              <p class="card-text">일시: 2021년 7월 11일 D-59</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">전통예능 갈래</h5>
+                            <span class="type-badge mb-2">공연</span>
+                            <p class="card-text">장소: 얼쑤마루 대공연장</p>
+                            <p class="card-text">일시: 2021년 7월 11일 D-59</p>
+                            <a href="javascript:void(0);">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">장인의 손길, 일상을 꾸미다 특별전</h5>
-                              <span class="badge bg-success mb-2">전시</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 기획전시실</h6>
-                              <p class="card-text">일시: 2020년 6월 30일 ~</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">장인의 손길, 일상을 꾸미다 특별전</h5>
+                            <span class="type-badge mb-2">전시</span>
+                            <p class="card-text">장소: 기획전시실</p>
+                            <p class="card-text">일시: 2020년 6월 30일 ~</p>
+                            <a href="javascript:void(0);">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">2019 국립무형유산원 무형유산 체험교육</h5>
-                              <span class="badge bg-danger mb-2">교육</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 전승마루 공예전승실1</h6>
-                              <p class="card-text">일시: 매주 토/일요일</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">2019 국립무형유산원 무형유산 체험교육</h5>
+                            <span class="type-badge mb-2">교육</span>
+                            <p class="card-text">장소: 전승마루 공예전승실1</p>
+                            <p class="card-text">일시: 매주 토/일요일</p>
+                            <a href="javascript:void(0);" class="card-more">상세내용 보기</a>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">문화가 있는 날3 - 신박서클</h5>
-                              <span class="badge bg-secondary mb-2">공연</span>
-                              <h6 class="card-subtitle mb-2 text-muted">장소: 얼쑤마루 대공연장</h6>
-                              <p class="card-text">일시: 2021년 7월 29일 D-77</p>
-                              <a href="javascript:void(0);" class="card-link">상세내용 보기</a>
-                            </div>
+                        <div class="event-card">
+                            <h5 class="card-title">문화가 있는 날3 - 신박서클</h5>
+                            <span class="type-badge mb-2">공연</span>
+                            <p class="card-text">장소: 얼쑤마루 대공연장</p>
+                            <p class="card-text">일시: 2021년 7월 29일 D-77</p>
+                            <a href="javascript:void(0);" class="card-more">상세내용 보기</a>
                         </div>
                     </div>
                 </div>
@@ -842,13 +810,13 @@
                 <div class="footer-txt">
                     <div class="footer-link">
                         <a href="">이용안내</a>
-                        <div class="vr"></div>
+                        <div class="divider"></div>
                         <a href="">개인정보 처리방침</a>
-                        <div class="vr"></div>
+                        <div class="divider"></div>
                         <a href="">저작권 보호정책</a>
-                        <div class="vr"></div>
+                        <div class="divider"></div>
                         <a href="">도로명 주소안내</a>
-                        <div class="vr"></div>
+                        <div class="divider"></div>
                         <a href="">사이트오류 신고</a>
                     </div>
                     <address>
