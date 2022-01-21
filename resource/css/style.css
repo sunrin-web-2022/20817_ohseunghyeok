@@ -34,6 +34,9 @@ a {
 label {
     cursor: pointer;
 }
+sup {
+    color: red;
+}
 #visual,#news,#event,#timeline {
     scroll-snap-align: start;
     min-height: calc(100vh - 120px);
@@ -44,6 +47,12 @@ label {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.btn-close:focus {
+    box-shadow: none;
 }
 
 
@@ -896,26 +905,33 @@ label {
     background-color: #fff;
     padding-bottom: 100px;
 }
-#content .sub-title {
+#content .content-title {
     display: flex;
     justify-content: center;
 }
-#content .sub-title > h3 {
+#content .content-title > h3 {
     font-size: 45px;
     font-weight: 400;
     margin: 72px 0 60px;
     text-align: center;
 }
-#content .content-wrapper {
+#content .top-title-box {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
-}
-#content h4 {
-    position: relative;
-    margin-bottom: 20px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #535a75;
 }
-#content h4::before {
+#content .sub-title {
+    font-size: 24px;
+}
+#content .content-wrapper {
+    margin-top: 20px;
+}
+#content .sub-title {
+    position: relative;
+}
+#content .sub-title::before {
     position: absolute;
     content: "";
     width: 36px;
@@ -977,6 +993,8 @@ label {
     background-color: #f2f2f2;
     transition: all .2s;
 }
+
+
 /* 서브페이지 (sub2) */
 #content .this_date {
     display: flex;
@@ -1028,6 +1046,140 @@ label {
 #content tbody > tr > td:hover {
     background-color: #f2f2f2;
 }
+
+
+/* 연혁 및 연혁 관리 페이지 */
+.cancel {
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    color: #6c757d
+}
+.cancel:hover {
+    color: #fff;
+    background-color: #6c757d
+}
+.btn-green {
+    background-color: transparent;
+    border: 1px solid #368560;
+    color: #368560;
+}
+.btn-green:hover {
+    color: #fff;
+    background-color: #368560;
+}
+.delete {
+    background-color: transparent;
+    border: 1px solid #da1d30;
+    color: #da1d30;
+}
+.delete:hover {
+    color: #fff;
+    background-color: #da1d30;
+}
+.create-history {
+    background-color: transparent;
+    border: 1px solid #2e63c5;
+    color: #2e63c5;
+}
+.create-history:hover {
+    color: #fff;
+    background-color: #2e63c5;
+}
+.history-tab-list {
+    display: flex;
+}
+.history-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: solid 1px #ced4da;
+    margin: 0 5px;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.history-tab:hover,
+.history-tab.active {
+    background-color: #dce1e6;
+}
+.history-tab-content {
+    display: none;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.history-tab-content.show {
+    display: block;
+}
+.tab-year {
+    font-size: 24px;
+    white-space: nowrap;
+}
+.tab-year-list {
+    display: inline-block;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.tab-year-list > li {
+    position: relative;
+    padding-left: 20px;
+}
+.tab-year-list > li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 6px);
+    width: 9px;
+    height: 9px;
+    border: 3px solid #c7c7c7;
+    border-radius: 50%;
+}
+.text-wrapper {
+    position: relative;
+    line-height: 32px;
+    padding: 0 120px 0 60px;
+}
+.tab-year-list .text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 90%;
+    color: #000;
+}
+.tab-year-list .date {
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+.tab-year-control {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+.create-histroy-input-box {
+    padding: 10px 0;
+}
+.modal-header > .fa-exclamation-triangle {
+    font-size: 20px;
+    color: red;
+    margin-right: 10px;
+}
+.modal-body > .fa-exclamation-triangle {
+    font-size: 20px;
+    color: red;
+    margin-right: 10px;
+}
+
+
 
 @keyframes banner_slide {
     0% {transform:translateX(0);}
@@ -1110,9 +1262,28 @@ label {
     #timeline .content {
         padding: 10px 15px;
     }
+    #location > .inner {
+        height: 50px;
+    }
+    #location .home {
+        height: 100%;
+    }
+    #location .page-depth a, 
+    #location .page-depth label {
+        font-size: 14px;
+        height: 100%;
+        padding: 10px;
+    }
+    #location .page-depth {
+        width: 200px;
+    }
 }
 @media screen and (max-width: 480px) {
     #banner .banner-list {
         animation: banner_slide_480 16s infinite;
+    }
+    #location .page-depth a, 
+    #location .page-depth label {
+        font-size: 12px;
     }
 }
